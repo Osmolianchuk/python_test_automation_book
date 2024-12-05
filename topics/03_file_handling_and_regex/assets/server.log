@@ -1,0 +1,15 @@
+2024-06-19 20:13:08 [main] INFO  [rid:0a9cbd56][ddi:afc76eb3d0254237] c.e.r.a.AutoloaderApplication - The following 3 profiles are active: "codes", "haver-db-names", "options-all-prod"
+2024-06-19 20:13:08 [main] ERROR  [rid:0a9cbd56][ddi:afc76eb3d0254237] o.s.b.c.config.ConfigDataEnvironment - Property 'spring.profiles' imported from location 'class path resource [application-options-all-prod.yml]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: class path resource [application-options-all-prod.yml] - 8:12]
+2024-06-19 20:13:09 [main] INFO  [rid:0a9cbd56][ddi:afc76eb3d0254237] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-06-19 20:13:09 [main] INFO  [rid:0a9cbd56][ddi:afc76eb3d0254237] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 121 ms. Found 1 JDBC repository interfaces.
+2024-06-19 20:13:10 [main] INFO  [rid:0a9cbd56][ddi:afc76eb3d0254237] o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2024-06-19 20:13:10 [main] INFO  [rid:0a9cbd56][ddi:afc76eb3d0254237] o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - No bean named 
+2024-06-19 20:13:11 [main] ERROR  [rid:0a9cbd56][ddi:afc76eb3d0254237] c.e.r.a.c.common.AwsConfiguration - DefaultCredentialsProvider will be used as a AwsCredentialsProvider
+2024-06-19 20:13:13 [main] ERROR  [rid:0a9cbd56][ddi:afc76eb3d0254237] o.s.b.c.c.a.DefaultBatchConfigurer - No transaction manager was provided, using a DataSourceTransactionManager
+2024-06-19 20:56:25 [main] ERROR  [rid:0a9cbd56][ddi:afc76eb3d0254237] c.e.r.a.ContextEventListener - Maybe the metrics were not transferred to 'localhost:9091'. java.net.ConnectException: Connection refused: no further information
+2024-06-19 20:56:25 [main] INFO  [rid:0a9cbd56][ddi:afc76eb3d0254237] o.s.i.endpoint.EventDrivenConsumer - Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2024-06-19 20:56:25 [main] INFO  [rid:0a9cbd56][ddi:afc76eb3d0254237] o.s.i.c.PublishSubscribeChannel - Channel 'application.errorChannel' has 0 subscriber(s).
+2024-06-19 20:56:25 [main] INFO  [rid:0a9cbd56][ddi:afc76eb3d0254237] o.s.i.endpoint.EventDrivenConsumer - stopped bean '_org.springframework.integration.errorLogger'
+2024-06-19 20:56:25 [main] INFO  [rid:0a9cbd56][ddi:afc76eb3d0254237] c.e.r.e.c.s.i.p.EventsCollectorAsyncPublisher - Shutting down...
+2024-06-19 20:56:25 [main] ERROR  [rid:0a9cbd56][ddi:afc76eb3d0254237] c.e.r.e.c.s.i.p.EventsCollectorAsyncPublisher - Waiting up to PT1M in 5 second intervals for collector event publishers to complete...
+.
