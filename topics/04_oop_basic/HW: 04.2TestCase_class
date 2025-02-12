@@ -1,0 +1,28 @@
+import unittest
+
+class MyTestCase(unittest.TestCase):
+    def setUp(self):
+        self.test_data = [1, 2, 3, 4, 5]
+        print("Setup complete.")
+
+    def test_sum(self):
+        result = sum(self.test_data)
+        self.assertEqual(result, 15, "Sum should be 15")
+        print("Test sum passed.")
+
+    def tearDown(self):
+        """Clean up after test."""
+        self.test_data = None
+        print("Teardown complete.")
+
+# Creating objects of the test case class to represent individual test cases
+if __name__ == '__main__':
+    # Create a test suite
+    suite = unittest.TestSuite()
+
+    # Add test cases to the suite
+    suite.addTest(MyTestCase('test_sum'))
+
+    # Run the test suite
+    runner = unittest.TextTestRunner()
+    runner.run(suite)

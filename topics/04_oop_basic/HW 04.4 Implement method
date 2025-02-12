@@ -1,0 +1,42 @@
+import unittest
+
+class BaseTest(unittest.TestCase):
+    def setUp(self):
+        """Setup common test resources."""
+        self.resource = 'Common resource'
+        print(f"Setting up {self.resource}")
+
+    def test_common_behavior(self):
+        """A common test method to all test cases."""
+        result = self.process('input data')
+        self.assertEqual(result, 'processed input data')
+
+    def process(self, data):
+        """A method intended to be overridden in a child class if needed."""
+        return f'processed {data}'
+
+    def tearDown(self):
+        """Clean up any resources after each test."""
+        print("Tearing down resources")
+        self.resource = None
+
+class CustomTest(BaseTest):
+    def setUp(self):
+        """Extend the existing setUp method by adding custom setup."""
+        super().setUp()
+        self.additional_resource = 'Custom resource'
+        print(f"Setting up an additional resource: {self.additional_resource}")
+
+    def process(self, data):
+        """Override the process method with a custom implementation."""
+        # Custom processing logic
+        return f'custom processed {data}'
+
+    def tearDown(self):
+        """Extend the tearDown method by cleaning up the custom resources."""
+        print(f"Cleaning up the additional resource: {self.additional_resource}")
+        self.additional_resource = None
+        super().tearDown()
+
+if __name__ == '__main__':
+    unittest.main()
